@@ -10,9 +10,9 @@
     <version>0.0.23-SNAPSHOT</version>
 
     <parent>
-        <groupId>com.spotify</groupId>
-        <artifactId>foss-root</artifactId>
-        <version>9</version>
+        <groupId>phxlabs</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.3.6</version>
     </parent>
 
     <properties>
