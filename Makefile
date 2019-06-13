@@ -59,4 +59,6 @@ clean:
 	docker rmi $(SERVICE_IMAGE_TAG)
 
 # most make targets are phony (not real files)
-.PHONY: up down run stop logs build-image maven-build build-maven-builder clean
+.PHONY: up down run stop logs build-image maven-build build-maven-builder build-local clean
+build-local:
+	./build/build-local.sh
