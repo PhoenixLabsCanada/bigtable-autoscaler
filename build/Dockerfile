@@ -1,6 +1,5 @@
-FROM openjdk:11-jre
+FROM maven:3-jdk-8-alpine
 
-ENTRYPOINT [ "/usr/bin/java", "-cp", "/usr/share/bigtable-autoscaler/bigtable-autoscaler.jar:/usr/share/bigtable-autoscaler/lib/*", "com.spotify.autoscaler.Main"]
+RUN addgroup -S -g 117 Jenkins \
+   && adduser -S -D -u 111 -s /sbin/nologin -h /jenkins -g "Jenkins User" -G Jenkins jenkins
 
-ADD target/lib /usr/share/bigtable-autoscaler/lib
-ADD target/bigtable-autoscaler.jar /usr/share/bigtable-autoscaler/bigtable-autoscaler.jar
