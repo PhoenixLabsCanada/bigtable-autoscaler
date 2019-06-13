@@ -56,6 +56,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://gcr.io', 'gcr:Cloud_Storage') {
                         image.push("${POMVERSION}")
+                        image.push("latest")
                     }
                 }
             }
