@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 withMaven(maven: 'mvn3.5.2', mavenSettingsConfig: 'phx-maven', mavenLocalRepo: '.repository') {
-                    sh '''export PATH=$MVN_CMD_DIR:$PATH && mvn -X -U clean package ${DEPLOY}'''
+                    sh '''export PATH=$MVN_CMD_DIR:$PATH && mvn -X -U -DskipTests clean package ${DEPLOY}'''
                 }
                 stash(name: 'target', includes: 'target/**/*.jar')
             }
