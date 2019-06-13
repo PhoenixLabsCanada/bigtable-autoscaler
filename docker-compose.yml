@@ -22,6 +22,6 @@ services:
       GOOGLE_APPLICATION_CREDENTIALS: /secret/credentials.json
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/secret/credentials.json
-    image: spotify/bigtable-autoscaler:latest
+    image: gcr.io/dauntless-141219/bigtable-autoscaler:latest
     ports:
       - 8080:8080
