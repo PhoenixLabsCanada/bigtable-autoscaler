@@ -4,4 +4,4 @@ ENTRYPOINT [ "/usr/bin/java", "-cp", "/usr/share/bigtable-autoscaler/bigtable-au
 
 ADD ./target/lib /usr/share/bigtable-autoscaler/lib
 ADD ./target/bigtable-autoscaler.jar /usr/share/bigtable-autoscaler/bigtable-autoscaler.jar
-ADD ./src/main/resources/schema.sql /private/etc/phxlabs/postgres-files/schema.sql
+COPY ./src/main/resources/schema.sql /etc/phxlabs/postgres-files/
